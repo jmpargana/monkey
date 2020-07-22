@@ -1,0 +1,322 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/631690ad/
+ASSIGN	token/consts.go	/^	ASSIGN   = "="$/;"	c	package:token
+ASTERISK	token/consts.go	/^	ASTERISK = "*"$/;"	c	package:token
+Alternative	ast/if.go	/^	Consequence, Alternative *BlockStatement$/;"	m	struct:ast.IfExpression	typeref:typename:*BlockStatement
+Arguments	ast/call.go	/^	Arguments []Expression$/;"	m	struct:ast.CallExpression	typeref:typename:[]Expression
+BANG	token/consts.go	/^	BANG     = "!"$/;"	c	package:token
+BOOLEAN_OBJ	object/object.go	/^	BOOLEAN_OBJ = "BOOLEAN"$/;"	c	package:object
+BlockStatement	ast/block.go	/^type BlockStatement struct {$/;"	s	package:ast
+Body	ast/fn.go	/^	Body       *BlockStatement$/;"	m	struct:ast.FunctionLiteral	typeref:typename:*BlockStatement
+Boolean	ast/bool.go	/^type Boolean struct {$/;"	s	package:ast
+Boolean	object/bool.go	/^type Boolean struct {$/;"	s	package:object
+CALL	parser/vars.go	/^	CALL        \/\/ myFunction(X)$/;"	c	package:parser
+COMMA	token/consts.go	/^	COMMA     = ","$/;"	c	package:token
+CallExpression	ast/call.go	/^type CallExpression struct {$/;"	s	package:ast
+Condition	ast/if.go	/^	Condition                Expression$/;"	m	struct:ast.IfExpression	typeref:typename:Expression
+Consequence	ast/if.go	/^	Consequence, Alternative *BlockStatement$/;"	m	struct:ast.IfExpression	typeref:typename:*BlockStatement
+ELSE	token/consts.go	/^	ELSE     = "ELSE"$/;"	c	package:token
+EOF	token/consts.go	/^	EOF     = "EOF"$/;"	c	package:token
+EQ	token/consts.go	/^	EQ  = "=="$/;"	c	package:token
+EQUALS	parser/vars.go	/^	EQUALS      \/\/ ==$/;"	c	package:parser
+Errors	parser/errors.go	/^func (p *Parser) Errors() []string {$/;"	f	unknown:parser.Parser	typeref:typename:[]string
+Eval	eval/eval.go	/^func Eval(node ast.Node) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+Expression	ast/expr.go	/^	Expression Expression$/;"	m	struct:ast.ExpressionStatement	typeref:typename:Expression
+Expression	ast/node.go	/^type Expression interface {$/;"	i	package:ast
+ExpressionStatement	ast/expr.go	/^type ExpressionStatement struct {$/;"	s	package:ast
+FALSE	eval/eval.go	/^	FALSE = &object.Boolean{Value: false}$/;"	v	package:eval
+FALSE	token/consts.go	/^	FALSE    = "FALSE"$/;"	c	package:token
+FUNCTION	token/consts.go	/^	FUNCTION = "FUNCTION"$/;"	c	package:token
+Function	ast/call.go	/^	Function  Expression$/;"	m	struct:ast.CallExpression	typeref:typename:Expression
+FunctionLiteral	ast/fn.go	/^type FunctionLiteral struct {$/;"	s	package:ast
+GT	token/consts.go	/^	GT  = ">"$/;"	c	package:token
+IDENT	token/consts.go	/^	IDENT = "IDENT" \/\/ add, foobar, x, y, ...$/;"	c	package:token
+IF	token/consts.go	/^	IF       = "IF"$/;"	c	package:token
+ILLEGAL	token/consts.go	/^	ILLEGAL = "ILLEGAL"$/;"	c	package:token
+INT	token/consts.go	/^	INT   = "INT"   \/\/ 1343123$/;"	c	package:token
+INTEGER_OBJ	object/object.go	/^	INTEGER_OBJ = "INTEGER"$/;"	c	package:object
+Identifier	ast/ident.go	/^type Identifier struct {$/;"	s	package:ast
+IfExpression	ast/if.go	/^type IfExpression struct {$/;"	s	package:ast
+InfixExpression	ast/infix.go	/^type InfixExpression struct {$/;"	s	package:ast
+Inspect	object/bool.go	/^func (b *Boolean) Inspect() string  { return fmt.Sprintf("%t", b.Value) }$/;"	f	struct:object.Boolean	typeref:typename:string
+Inspect	object/int.go	/^func (i *Integer) Inspect() string { return fmt.Sprintf("%d", i.Value) }$/;"	f	struct:object.Integer	typeref:typename:string
+Inspect	object/null.go	/^func (n *Null) Inspect() string  { return "null" }$/;"	f	struct:object.Null	typeref:typename:string
+Inspect	object/object.go	/^	Inspect() string$/;"	n	interface:object.Object	typeref:typename:string
+Integer	object/int.go	/^type Integer struct {$/;"	s	package:object
+IntegerLiteral	ast/int.go	/^type IntegerLiteral struct {$/;"	s	package:ast
+LBRACE	token/consts.go	/^	LBRACE = "{"$/;"	c	package:token
+LESSGREATER	parser/vars.go	/^	LESSGREATER \/\/ > or <$/;"	c	package:parser
+LET	token/consts.go	/^	LET      = "LET"$/;"	c	package:token
+LOWEST	parser/vars.go	/^	LOWEST$/;"	c	package:parser
+LPAREN	token/consts.go	/^	LPAREN = "("$/;"	c	package:token
+LT	token/consts.go	/^	LT  = "<"$/;"	c	package:token
+Left	ast/infix.go	/^	Left     Expression$/;"	m	struct:ast.InfixExpression	typeref:typename:Expression
+LetStatement	ast/let.go	/^type LetStatement struct {$/;"	s	package:ast
+Lexer	lexer/lexer.go	/^type Lexer struct {$/;"	s	package:lexer
+Literal	token/token.go	/^	Literal string$/;"	m	struct:token.Token	typeref:typename:string
+LookupIdent	token/token.go	/^func LookupIdent(ident string) TokenType {$/;"	f	package:token	typeref:typename:TokenType
+MINUS	token/consts.go	/^	MINUS    = "-"$/;"	c	package:token
+MONKEY_FACE	repl/monkey.go	/^const MONKEY_FACE = `		$/;"	c	package:repl
+NULL	eval/eval.go	/^	NULL  = &object.Null{}$/;"	v	package:eval
+NULL_OBJ	object/object.go	/^	NULL_OBJ    = "NULL"$/;"	c	package:object
+Name	ast/let.go	/^	Name  *Identifier$/;"	m	struct:ast.LetStatement	typeref:typename:*Identifier
+New	lexer/lexer.go	/^func New(input string) *Lexer {$/;"	f	package:lexer	typeref:typename:*Lexer
+New	parser/parser.go	/^func New(l *lexer.Lexer) *Parser {$/;"	f	package:parser	typeref:typename:*Parser
+NextToken	lexer/public.go	/^func (l *Lexer) NextToken() token.Token {$/;"	f	unknown:lexer.Lexer	typeref:typename:token.Token
+Node	ast/node.go	/^type Node interface {$/;"	i	package:ast
+Null	object/null.go	/^type Null struct{}$/;"	s	package:object
+Object	object/object.go	/^type Object interface {$/;"	i	package:object
+ObjectType	object/object.go	/^type ObjectType string$/;"	t	package:object	typeref:typename:string
+Operator	ast/infix.go	/^	Operator string$/;"	m	struct:ast.InfixExpression	typeref:typename:string
+Operator	ast/prefix.go	/^	Operator string$/;"	m	struct:ast.PrefixExpression	typeref:typename:string
+PLUS	token/consts.go	/^	PLUS     = "+"$/;"	c	package:token
+PREFIX	parser/vars.go	/^	PREFIX      \/\/ -X or !X$/;"	c	package:parser
+PRODUCT	parser/vars.go	/^	PRODUCT     \/\/ *$/;"	c	package:parser
+PROMPT	repl/repl.go	/^const PROMPT = ">> "$/;"	c	package:repl
+Parameters	ast/fn.go	/^	Parameters []*Identifier$/;"	m	struct:ast.FunctionLiteral	typeref:typename:[]*Identifier
+ParseProgram	parser/parser.go	/^func (p *Parser) ParseProgram() *ast.Program {$/;"	f	struct:parser.Parser	typeref:typename:*ast.Program
+Parser	parser/parser.go	/^type Parser struct {$/;"	s	package:parser
+PrefixExpression	ast/prefix.go	/^type PrefixExpression struct {$/;"	s	package:ast
+Program	ast/program.go	/^type Program struct {$/;"	s	package:ast
+RBRACE	token/consts.go	/^	RBRACE = "}"$/;"	c	package:token
+RETURN	token/consts.go	/^	RETURN   = "RETURN"$/;"	c	package:token
+RPAREN	token/consts.go	/^	RPAREN = ")"$/;"	c	package:token
+ReturnStatement	ast/return.go	/^type ReturnStatement struct {$/;"	s	package:ast
+ReturnValue	ast/return.go	/^	ReturnValue Expression$/;"	m	struct:ast.ReturnStatement	typeref:typename:Expression
+Right	ast/infix.go	/^	Right    Expression$/;"	m	struct:ast.InfixExpression	typeref:typename:Expression
+Right	ast/prefix.go	/^	Right    Expression$/;"	m	struct:ast.PrefixExpression	typeref:typename:Expression
+SEMICOLON	token/consts.go	/^	SEMICOLON = ";"$/;"	c	package:token
+SPLASH	token/consts.go	/^	SPLASH   = "\/"$/;"	c	package:token
+SUM	parser/vars.go	/^	SUM         \/\/ +$/;"	c	package:parser
+Start	repl/repl.go	/^func Start(in io.Reader, out io.Writer) {$/;"	f	package:repl
+Statement	ast/node.go	/^type Statement interface {$/;"	i	package:ast
+Statements	ast/block.go	/^	Statements []Statement$/;"	m	struct:ast.BlockStatement	typeref:typename:[]Statement
+Statements	ast/program.go	/^	Statements []Statement$/;"	m	struct:ast.Program	typeref:typename:[]Statement
+String	ast/block.go	/^func (bs *BlockStatement) String() string {$/;"	f	struct:ast.BlockStatement	typeref:typename:string
+String	ast/bool.go	/^func (b *Boolean) String() string       { return b.Token.Literal }$/;"	f	struct:ast.Boolean	typeref:typename:string
+String	ast/call.go	/^func (ce *CallExpression) String() string {$/;"	f	struct:ast.CallExpression	typeref:typename:string
+String	ast/expr.go	/^func (es *ExpressionStatement) String() string {$/;"	f	struct:ast.ExpressionStatement	typeref:typename:string
+String	ast/fn.go	/^func (fl *FunctionLiteral) String() string {$/;"	f	struct:ast.FunctionLiteral	typeref:typename:string
+String	ast/ident.go	/^func (i *Identifier) String() string { return i.Value }$/;"	f	struct:ast.Identifier	typeref:typename:string
+String	ast/if.go	/^func (ie *IfExpression) String() string {$/;"	f	struct:ast.IfExpression	typeref:typename:string
+String	ast/infix.go	/^func (oe *InfixExpression) String() string {$/;"	f	struct:ast.InfixExpression	typeref:typename:string
+String	ast/int.go	/^func (il *IntegerLiteral) String() string       { return il.Token.Literal }$/;"	f	struct:ast.IntegerLiteral	typeref:typename:string
+String	ast/let.go	/^func (ls *LetStatement) String() string {$/;"	f	struct:ast.LetStatement	typeref:typename:string
+String	ast/node.go	/^	String() string$/;"	n	interface:ast.Node	typeref:typename:string
+String	ast/prefix.go	/^func (pe *PrefixExpression) String() string {$/;"	f	struct:ast.PrefixExpression	typeref:typename:string
+String	ast/program.go	/^func (p *Program) String() string {$/;"	f	struct:ast.Program	typeref:typename:string
+String	ast/return.go	/^func (rs *ReturnStatement) String() string {$/;"	f	struct:ast.ReturnStatement	typeref:typename:string
+TRUE	eval/eval.go	/^	TRUE  = &object.Boolean{Value: true}$/;"	v	package:eval
+TRUE	token/consts.go	/^	TRUE     = "TRUE"$/;"	c	package:token
+TestBangOperator	eval/infix_test.go	/^func TestBangOperator(t *testing.T) {$/;"	f	package:eval
+TestBangOperator	eval/prefix_test.go	/^func TestBangOperator(t *testing.T) {$/;"	f	package:eval
+TestCallExpressionParsing	parser/call_test.go	/^func TestCallExpressionParsing(t *testing.T) {$/;"	f	package:parser
+TestEvalBooleanExpression	eval/bool_test.go	/^func TestEvalBooleanExpression(t *testing.T) {$/;"	f	package:eval
+TestEvalIntegerExpression	eval/int_test.go	/^func TestEvalIntegerExpression(t *testing.T) {$/;"	f	package:eval
+TestFunctionLiteralParsing	parser/fn_test.go	/^func TestFunctionLiteralParsing(t *testing.T) {$/;"	f	package:parser
+TestFunctionParameterParsing	parser/fn_test.go	/^func TestFunctionParameterParsing(t *testing.T) {$/;"	f	package:parser
+TestIdentifierExpression	parser/ident_test.go	/^func TestIdentifierExpression(t *testing.T) {$/;"	f	package:parser
+TestIfExpression	parser/if_test.go	/^func TestIfExpression(t *testing.T) {$/;"	f	package:parser
+TestIntegerLiteralExpression	parser/int_test.go	/^func TestIntegerLiteralExpression(t *testing.T) {$/;"	f	package:parser
+TestLetStaments	parser/let_test.go	/^func TestLetStaments(t *testing.T) {$/;"	f	package:parser
+TestNextToken	lexer/lexer_test.go	/^func TestNextToken(t *testing.T) {$/;"	f	package:lexer
+TestOperatorPrecedenceParsing	parser/precedence_test.go	/^func TestOperatorPrecedenceParsing(t *testing.T) {$/;"	f	package:parser
+TestParsingInfixExpressions	parser/infix_test.go	/^func TestParsingInfixExpressions(t *testing.T) {$/;"	f	package:parser
+TestParsingPrefixExpressions	parser/prefix_test.go	/^func TestParsingPrefixExpressions(t *testing.T) {$/;"	f	package:parser
+TestReturnStatements	parser/return_test.go	/^func TestReturnStatements(t *testing.T) {$/;"	f	package:parser
+TestString	ast/ast_test.go	/^func TestString(t *testing.T) {$/;"	f	package:ast
+Token	ast/block.go	/^	Token      token.Token$/;"	m	struct:ast.BlockStatement	typeref:typename:token.Token
+Token	ast/bool.go	/^	Token token.Token$/;"	m	struct:ast.Boolean	typeref:typename:token.Token
+Token	ast/call.go	/^	Token     token.Token$/;"	m	struct:ast.CallExpression	typeref:typename:token.Token
+Token	ast/expr.go	/^	Token      token.Token$/;"	m	struct:ast.ExpressionStatement	typeref:typename:token.Token
+Token	ast/fn.go	/^	Token      token.Token$/;"	m	struct:ast.FunctionLiteral	typeref:typename:token.Token
+Token	ast/ident.go	/^	Token token.Token$/;"	m	struct:ast.Identifier	typeref:typename:token.Token
+Token	ast/if.go	/^	Token                    token.Token$/;"	m	struct:ast.IfExpression	typeref:typename:token.Token
+Token	ast/infix.go	/^	Token    token.Token$/;"	m	struct:ast.InfixExpression	typeref:typename:token.Token
+Token	ast/int.go	/^	Token token.Token$/;"	m	struct:ast.IntegerLiteral	typeref:typename:token.Token
+Token	ast/let.go	/^	Token token.Token$/;"	m	struct:ast.LetStatement	typeref:typename:token.Token
+Token	ast/prefix.go	/^	Token    token.Token$/;"	m	struct:ast.PrefixExpression	typeref:typename:token.Token
+Token	ast/return.go	/^	Token       token.Token$/;"	m	struct:ast.ReturnStatement	typeref:typename:token.Token
+Token	token/token.go	/^type Token struct {$/;"	s	package:token
+TokenLiteral	ast/block.go	/^func (bs *BlockStatement) TokenLiteral() string { return bs.Token.Literal }$/;"	f	struct:ast.BlockStatement	typeref:typename:string
+TokenLiteral	ast/bool.go	/^func (b *Boolean) TokenLiteral() string { return b.Token.Literal }$/;"	f	struct:ast.Boolean	typeref:typename:string
+TokenLiteral	ast/call.go	/^func (ce *CallExpression) TokenLiteral() string { return ce.Token.Literal }$/;"	f	struct:ast.CallExpression	typeref:typename:string
+TokenLiteral	ast/expr.go	/^func (es *ExpressionStatement) TokenLiteral() string { return es.Token.Literal }$/;"	f	struct:ast.ExpressionStatement	typeref:typename:string
+TokenLiteral	ast/fn.go	/^func (fl *FunctionLiteral) TokenLiteral() string { return fl.Token.Literal }$/;"	f	struct:ast.FunctionLiteral	typeref:typename:string
+TokenLiteral	ast/ident.go	/^func (i *Identifier) TokenLiteral() string { return i.Token.Literal }$/;"	f	struct:ast.Identifier	typeref:typename:string
+TokenLiteral	ast/if.go	/^func (ie *IfExpression) TokenLiteral() string { return ie.Token.Literal }$/;"	f	struct:ast.IfExpression	typeref:typename:string
+TokenLiteral	ast/infix.go	/^func (oe *InfixExpression) TokenLiteral() string { return oe.Token.Literal }$/;"	f	struct:ast.InfixExpression	typeref:typename:string
+TokenLiteral	ast/int.go	/^func (il *IntegerLiteral) TokenLiteral() string { return il.Token.Literal }$/;"	f	struct:ast.IntegerLiteral	typeref:typename:string
+TokenLiteral	ast/let.go	/^func (ls *LetStatement) TokenLiteral() string { return ls.Token.Literal }$/;"	f	struct:ast.LetStatement	typeref:typename:string
+TokenLiteral	ast/node.go	/^	TokenLiteral() string$/;"	n	interface:ast.Node	typeref:typename:string
+TokenLiteral	ast/prefix.go	/^func (pe *PrefixExpression) TokenLiteral() string { return pe.Token.Literal }$/;"	f	struct:ast.PrefixExpression	typeref:typename:string
+TokenLiteral	ast/program.go	/^func (p *Program) TokenLiteral() string {$/;"	f	struct:ast.Program	typeref:typename:string
+TokenLiteral	ast/return.go	/^func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal }$/;"	f	struct:ast.ReturnStatement	typeref:typename:string
+TokenType	token/token.go	/^type TokenType string$/;"	t	package:token	typeref:typename:string
+Type	object/bool.go	/^func (b *Boolean) Type() ObjectType { return BOOLEAN_OBJ }$/;"	f	struct:object.Boolean	typeref:typename:ObjectType
+Type	object/int.go	/^func (i *Integer) Type() ObjectType { return INTEGER_OBJ }$/;"	f	struct:object.Integer	typeref:typename:ObjectType
+Type	object/null.go	/^func (n *Null) Type() ObjectType { return NULL_OBJ }$/;"	f	struct:object.Null	typeref:typename:ObjectType
+Type	object/object.go	/^	Type() ObjectType$/;"	n	interface:object.Object	typeref:typename:ObjectType
+Type	token/token.go	/^	Type    TokenType$/;"	m	struct:token.Token	typeref:typename:TokenType
+UEQ	token/consts.go	/^	UEQ = "!="$/;"	c	package:token
+Value	ast/bool.go	/^	Value bool$/;"	m	struct:ast.Boolean	typeref:typename:bool
+Value	ast/ident.go	/^	Value string$/;"	m	struct:ast.Identifier	typeref:typename:string
+Value	ast/int.go	/^	Value int64$/;"	m	struct:ast.IntegerLiteral	typeref:typename:int64
+Value	ast/let.go	/^	Value Expression$/;"	m	struct:ast.LetStatement	typeref:typename:Expression
+Value	object/bool.go	/^	Value bool$/;"	m	struct:object.Boolean	typeref:typename:bool
+Value	object/int.go	/^	Value int64$/;"	m	struct:object.Integer	typeref:typename:int64
+_	parser/vars.go	/^	_ int = iota$/;"	c	package:parser	typeref:typename:int
+ast	ast/ast_test.go	/^package ast$/;"	p
+ast	ast/block.go	/^package ast$/;"	p
+ast	ast/bool.go	/^package ast$/;"	p
+ast	ast/call.go	/^package ast$/;"	p
+ast	ast/expr.go	/^package ast$/;"	p
+ast	ast/fn.go	/^package ast$/;"	p
+ast	ast/ident.go	/^package ast$/;"	p
+ast	ast/if.go	/^package ast$/;"	p
+ast	ast/infix.go	/^package ast$/;"	p
+ast	ast/int.go	/^package ast$/;"	p
+ast	ast/let.go	/^package ast$/;"	p
+ast	ast/node.go	/^package ast$/;"	p
+ast	ast/prefix.go	/^package ast$/;"	p
+ast	ast/program.go	/^package ast$/;"	p
+ast	ast/return.go	/^package ast$/;"	p
+ch	lexer/lexer.go	/^	ch           byte \/\/ current char under examination$/;"	m	struct:lexer.Lexer	typeref:typename:byte
+checkParseErrors	parser/errors_test.go	/^func checkParseErrors(t *testing.T, p *Parser) {$/;"	f	package:parser
+curPrecedence	parser/helpers.go	/^func (p *Parser) curPrecedence() int {$/;"	f	unknown:parser.Parser	typeref:typename:int
+curToken	parser/parser.go	/^	curToken  token.Token$/;"	m	struct:parser.Parser	typeref:typename:token.Token
+curTokenIs	parser/helpers.go	/^func (p *Parser) curTokenIs(t token.TokenType) bool {$/;"	f	unknown:parser.Parser	typeref:typename:bool
+errors	parser/parser.go	/^	errors []string$/;"	m	struct:parser.Parser	typeref:typename:[]string
+eval	eval/bool.go	/^package eval$/;"	p
+eval	eval/bool_test.go	/^package eval$/;"	p
+eval	eval/eval.go	/^package eval$/;"	p
+eval	eval/helpers_test.go	/^package eval$/;"	p
+eval	eval/infix_test.go	/^package eval$/;"	p
+eval	eval/int_test.go	/^package eval$/;"	p
+eval	eval/prefix.go	/^package eval$/;"	p
+eval	eval/prefix_test.go	/^package eval$/;"	p
+eval	eval/statements.go	/^package eval$/;"	p
+evalBangOperatorExpression	eval/prefix.go	/^func evalBangOperatorExpression(right object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+evalMinusPrefixOperatorExpression	eval/prefix.go	/^func evalMinusPrefixOperatorExpression(right object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+evalPrefixExpression	eval/prefix.go	/^func evalPrefixExpression(operator string, right object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+evalStatements	eval/statements.go	/^func evalStatements(stmts []ast.Statement) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+expectPeek	parser/helpers.go	/^func (p *Parser) expectPeek(t token.TokenType) bool {$/;"	f	unknown:parser.Parser	typeref:typename:bool
+expressionNode	ast/bool.go	/^func (b *Boolean) expressionNode()      {}$/;"	f	struct:ast.Boolean
+expressionNode	ast/call.go	/^func (ce *CallExpression) expressionNode()      {}$/;"	f	struct:ast.CallExpression
+expressionNode	ast/fn.go	/^func (fl *FunctionLiteral) expressionNode()      {}$/;"	f	struct:ast.FunctionLiteral
+expressionNode	ast/ident.go	/^func (i *Identifier) expressionNode()      {}$/;"	f	struct:ast.Identifier
+expressionNode	ast/if.go	/^func (ie *IfExpression) expressionNode()      {}$/;"	f	struct:ast.IfExpression
+expressionNode	ast/infix.go	/^func (oe *InfixExpression) expressionNode()      {}$/;"	f	struct:ast.InfixExpression
+expressionNode	ast/int.go	/^func (il *IntegerLiteral) expressionNode()      {}$/;"	f	struct:ast.IntegerLiteral
+expressionNode	ast/node.go	/^	expressionNode()$/;"	n	interface:ast.Expression
+expressionNode	ast/prefix.go	/^func (pe *PrefixExpression) expressionNode()      {}$/;"	f	struct:ast.PrefixExpression
+infixParseFn	parser/parser.go	/^	infixParseFn  func(ast.Expression) ast.Expression$/;"	t	package:parser	typeref:typename:func(ast.Expression) ast.Expression
+infixParseFns	parser/parser.go	/^	infixParseFns  map[token.TokenType]infixParseFn$/;"	m	struct:parser.Parser	typeref:typename:map[token.TokenType]infixParseFn
+input	lexer/lexer.go	/^	input        string$/;"	m	struct:lexer.Lexer	typeref:typename:string
+isDigit	lexer/private.go	/^func isDigit(ch byte) bool {$/;"	f	package:lexer	typeref:typename:bool
+isLetter	lexer/private.go	/^func isLetter(ch byte) bool {$/;"	f	package:lexer	typeref:typename:bool
+keywords	token/consts.go	/^var keywords = map[string]TokenType{$/;"	v	package:token
+l	parser/parser.go	/^	l      *lexer.Lexer$/;"	m	struct:parser.Parser	typeref:typename:*lexer.Lexer
+lexer	lexer/lexer.go	/^package lexer$/;"	p
+lexer	lexer/lexer_test.go	/^package lexer$/;"	p
+lexer	lexer/private.go	/^package lexer$/;"	p
+lexer	lexer/public.go	/^package lexer$/;"	p
+main	main.go	/^func main() {$/;"	f	package:main
+main	main.go	/^package main$/;"	p
+nativeBoolToBooleanObject	eval/eval.go	/^func nativeBoolToBooleanObject(input bool) *object.Boolean {$/;"	f	package:eval	typeref:typename:*object.Boolean
+newToken	lexer/private.go	/^func newToken(tokenType token.TokenType, ch byte) token.Token {$/;"	f	package:lexer	typeref:typename:token.Token
+nextToken	parser/helpers.go	/^func (p *Parser) nextToken() {$/;"	f	unknown:parser.Parser
+noPrefixParseFnError	parser/errors.go	/^func (p *Parser) noPrefixParseFnError(t token.TokenType) {$/;"	f	unknown:parser.Parser
+object	object/bool.go	/^package object$/;"	p
+object	object/int.go	/^package object$/;"	p
+object	object/null.go	/^package object$/;"	p
+object	object/object.go	/^package object$/;"	p
+parseBlockStatement	parser/block.go	/^func (p *Parser) parseBlockStatement() *ast.BlockStatement {$/;"	f	unknown:parser.Parser	typeref:typename:*ast.BlockStatement
+parseBoolean	parser/bool.go	/^func (p *Parser) parseBoolean() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseCallArguments	parser/call.go	/^func (p *Parser) parseCallArguments() []ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:[]ast.Expression
+parseCallExpression	parser/call.go	/^func (p *Parser) parseCallExpression(fn ast.Expression) ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseExpression	parser/expr.go	/^func (p *Parser) parseExpression(precedence int) ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseExpressionStatement	parser/expr.go	/^func (p *Parser) parseExpressionStatement() *ast.ExpressionStatement {$/;"	f	unknown:parser.Parser	typeref:typename:*ast.ExpressionStatement
+parseFunctionLiteral	parser/fn.go	/^func (p *Parser) parseFunctionLiteral() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseFunctionParameters	parser/fn.go	/^func (p *Parser) parseFunctionParameters() []*ast.Identifier {$/;"	f	unknown:parser.Parser	typeref:typename:[]*ast.Identifier
+parseGroupedExpression	parser/helpers.go	/^func (p *Parser) parseGroupedExpression() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseIdentifier	parser/ident.go	/^func (p *Parser) parseIdentifier() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseIfExpression	parser/if.go	/^func (p *Parser) parseIfExpression() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseInfixExpression	parser/infix.go	/^func (p *Parser) parseInfixExpression(left ast.Expression) ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseIntegerLiteral	parser/int.go	/^func (p *Parser) parseIntegerLiteral() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseLetStatement	parser/let.go	/^func (p *Parser) parseLetStatement() *ast.LetStatement {$/;"	f	unknown:parser.Parser	typeref:typename:*ast.LetStatement
+parsePrefixExpression	parser/prefix.go	/^func (p *Parser) parsePrefixExpression() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseReturnStatement	parser/return.go	/^func (p *Parser) parseReturnStatement() *ast.ReturnStatement {$/;"	f	unknown:parser.Parser	typeref:typename:*ast.ReturnStatement
+parseStatement	parser/stmt.go	/^func (p *Parser) parseStatement() ast.Statement {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Statement
+parser	parser/block.go	/^package parser$/;"	p
+parser	parser/bool.go	/^package parser$/;"	p
+parser	parser/call.go	/^package parser$/;"	p
+parser	parser/call_test.go	/^package parser$/;"	p
+parser	parser/errors.go	/^package parser$/;"	p
+parser	parser/errors_test.go	/^package parser$/;"	p
+parser	parser/expr.go	/^package parser$/;"	p
+parser	parser/fn.go	/^package parser$/;"	p
+parser	parser/fn_test.go	/^package parser$/;"	p
+parser	parser/helpers.go	/^package parser$/;"	p
+parser	parser/helpers_test.go	/^package parser$/;"	p
+parser	parser/ident.go	/^package parser$/;"	p
+parser	parser/ident_test.go	/^package parser$/;"	p
+parser	parser/if.go	/^package parser$/;"	p
+parser	parser/if_test.go	/^package parser$/;"	p
+parser	parser/infix.go	/^package parser$/;"	p
+parser	parser/infix_test.go	/^package parser$/;"	p
+parser	parser/int.go	/^package parser$/;"	p
+parser	parser/int_test.go	/^package parser$/;"	p
+parser	parser/let.go	/^package parser$/;"	p
+parser	parser/let_test.go	/^package parser$/;"	p
+parser	parser/parser.go	/^package parser$/;"	p
+parser	parser/precedence_test.go	/^package parser$/;"	p
+parser	parser/prefix.go	/^package parser$/;"	p
+parser	parser/prefix_test.go	/^package parser$/;"	p
+parser	parser/register_helpers.go	/^package parser$/;"	p
+parser	parser/return.go	/^package parser$/;"	p
+parser	parser/return_test.go	/^package parser$/;"	p
+parser	parser/stmt.go	/^package parser$/;"	p
+parser	parser/vars.go	/^package parser$/;"	p
+peekChar	lexer/private.go	/^func (l *Lexer) peekChar() byte {$/;"	f	unknown:lexer.Lexer	typeref:typename:byte
+peekError	parser/errors.go	/^func (p *Parser) peekError(t token.TokenType) {$/;"	f	unknown:parser.Parser
+peekPrecedence	parser/helpers.go	/^func (p *Parser) peekPrecedence() int {$/;"	f	unknown:parser.Parser	typeref:typename:int
+peekToken	parser/parser.go	/^	peekToken token.Token$/;"	m	struct:parser.Parser	typeref:typename:token.Token
+peekTokenIs	parser/helpers.go	/^func (p *Parser) peekTokenIs(t token.TokenType) bool {$/;"	f	unknown:parser.Parser	typeref:typename:bool
+position	lexer/lexer.go	/^	position     int  \/\/ current position in input (points to current char)$/;"	m	struct:lexer.Lexer	typeref:typename:int
+precedences	parser/vars.go	/^var precedences = map[token.TokenType]int{$/;"	v	package:parser
+prefixParseFn	parser/parser.go	/^	prefixParseFn func() ast.Expression$/;"	t	package:parser	typeref:typename:func() ast.Expression
+prefixParseFns	parser/parser.go	/^	prefixParseFns map[token.TokenType]prefixParseFn$/;"	m	struct:parser.Parser	typeref:typename:map[token.TokenType]prefixParseFn
+printParserErrors	repl/repl.go	/^func printParserErrors(out io.Writer, errors []string) {$/;"	f	package:repl
+readChar	lexer/private.go	/^func (l *Lexer) readChar() {$/;"	f	unknown:lexer.Lexer
+readIdentifier	lexer/private.go	/^func (l *Lexer) readIdentifier() string {$/;"	f	unknown:lexer.Lexer	typeref:typename:string
+readNumber	lexer/private.go	/^func (l *Lexer) readNumber() string {$/;"	f	unknown:lexer.Lexer	typeref:typename:string
+readPosition	lexer/lexer.go	/^	readPosition int  \/\/ current reading position in input (after current char)$/;"	m	struct:lexer.Lexer	typeref:typename:int
+registerInfix	parser/register_helpers.go	/^func (p *Parser) registerInfix(tokenType token.TokenType, fn infixParseFn) {$/;"	f	unknown:parser.Parser
+registerPrefix	parser/register_helpers.go	/^func (p *Parser) registerPrefix(tokenType token.TokenType, fn prefixParseFn) {$/;"	f	unknown:parser.Parser
+repl	repl/monkey.go	/^package repl$/;"	p
+repl	repl/repl.go	/^package repl$/;"	p
+skipWhitespace	lexer/private.go	/^func (l *Lexer) skipWhitespace() {$/;"	f	unknown:lexer.Lexer
+statementNode	ast/block.go	/^func (bs *BlockStatement) statementNode()       {}$/;"	f	struct:ast.BlockStatement
+statementNode	ast/expr.go	/^func (es *ExpressionStatement) statementNode()       {}$/;"	f	struct:ast.ExpressionStatement
+statementNode	ast/let.go	/^func (ls *LetStatement) statementNode()       {}$/;"	f	struct:ast.LetStatement
+statementNode	ast/node.go	/^	statementNode()$/;"	n	interface:ast.Statement
+statementNode	ast/return.go	/^func (rs *ReturnStatement) statementNode()       {}$/;"	f	struct:ast.ReturnStatement
+testBooleanLiteral	parser/helpers_test.go	/^func testBooleanLiteral(t *testing.T, exp ast.Expression, value bool) bool {$/;"	f	package:parser	typeref:typename:bool
+testBooleanObject	eval/bool_test.go	/^func testBooleanObject(t *testing.T, obj object.Object, expected bool) bool {$/;"	f	package:eval	typeref:typename:bool
+testEval	eval/helpers_test.go	/^func testEval(input string) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+testIdentifier	parser/helpers_test.go	/^func testIdentifier(t *testing.T, exp ast.Expression, value string) bool {$/;"	f	package:parser	typeref:typename:bool
+testInfixExpression	parser/helpers_test.go	/^func testInfixExpression(t *testing.T, exp ast.Expression, left interface{},$/;"	f	package:parser	typeref:typename:bool
+testIntegerLiteral	parser/helpers_test.go	/^func testIntegerLiteral(t *testing.T, il ast.Expression, value int64) bool {$/;"	f	package:parser	typeref:typename:bool
+testIntegerObject	eval/int_test.go	/^func testIntegerObject(t *testing.T, obj object.Object, expected int64) bool {$/;"	f	package:eval	typeref:typename:bool
+testLetStatement	parser/helpers_test.go	/^func testLetStatement(t *testing.T, s ast.Statement, name string) bool {$/;"	f	package:parser	typeref:typename:bool
+testLiteralExpression	parser/helpers_test.go	/^func testLiteralExpression($/;"	f	package:parser	typeref:typename:bool
+token	token/consts.go	/^package token$/;"	p
+token	token/token.go	/^package token$/;"	p
