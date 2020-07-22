@@ -115,7 +115,6 @@ String	ast/program.go	/^func (p *Program) String() string {$/;"	f	struct:ast.Pro
 String	ast/return.go	/^func (rs *ReturnStatement) String() string {$/;"	f	struct:ast.ReturnStatement	typeref:typename:string
 TRUE	eval/eval.go	/^	TRUE  = &object.Boolean{Value: true}$/;"	v	package:eval
 TRUE	token/consts.go	/^	TRUE     = "TRUE"$/;"	c	package:token
-TestBangOperator	eval/infix_test.go	/^func TestBangOperator(t *testing.T) {$/;"	f	package:eval
 TestBangOperator	eval/prefix_test.go	/^func TestBangOperator(t *testing.T) {$/;"	f	package:eval
 TestCallExpressionParsing	parser/call_test.go	/^func TestCallExpressionParsing(t *testing.T) {$/;"	f	package:parser
 TestEvalBooleanExpression	eval/bool_test.go	/^func TestEvalBooleanExpression(t *testing.T) {$/;"	f	package:eval
@@ -123,6 +122,7 @@ TestEvalIntegerExpression	eval/int_test.go	/^func TestEvalIntegerExpression(t *t
 TestFunctionLiteralParsing	parser/fn_test.go	/^func TestFunctionLiteralParsing(t *testing.T) {$/;"	f	package:parser
 TestFunctionParameterParsing	parser/fn_test.go	/^func TestFunctionParameterParsing(t *testing.T) {$/;"	f	package:parser
 TestIdentifierExpression	parser/ident_test.go	/^func TestIdentifierExpression(t *testing.T) {$/;"	f	package:parser
+TestIfElseExpressions	eval/if_test.go	/^func TestIfElseExpressions(t *testing.T) {$/;"	f	package:eval
 TestIfExpression	parser/if_test.go	/^func TestIfExpression(t *testing.T) {$/;"	f	package:parser
 TestIntegerLiteralExpression	parser/int_test.go	/^func TestIntegerLiteralExpression(t *testing.T) {$/;"	f	package:parser
 TestLetStaments	parser/let_test.go	/^func TestLetStaments(t *testing.T) {$/;"	f	package:parser
@@ -198,12 +198,16 @@ eval	eval/bool.go	/^package eval$/;"	p
 eval	eval/bool_test.go	/^package eval$/;"	p
 eval	eval/eval.go	/^package eval$/;"	p
 eval	eval/helpers_test.go	/^package eval$/;"	p
+eval	eval/if_test.go	/^package eval$/;"	p
+eval	eval/infix.go	/^package eval$/;"	p
 eval	eval/infix_test.go	/^package eval$/;"	p
 eval	eval/int_test.go	/^package eval$/;"	p
 eval	eval/prefix.go	/^package eval$/;"	p
 eval	eval/prefix_test.go	/^package eval$/;"	p
 eval	eval/statements.go	/^package eval$/;"	p
 evalBangOperatorExpression	eval/prefix.go	/^func evalBangOperatorExpression(right object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+evalInfixExpression	eval/infix.go	/^func evalInfixExpression($/;"	f	package:eval	typeref:typename:object.Object
+evalIntegerInfixExpression	eval/infix.go	/^func evalIntegerInfixExpression($/;"	f	package:eval	typeref:typename:object.Object
 evalMinusPrefixOperatorExpression	eval/prefix.go	/^func evalMinusPrefixOperatorExpression(right object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
 evalPrefixExpression	eval/prefix.go	/^func evalPrefixExpression(operator string, right object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
 evalStatements	eval/statements.go	/^func evalStatements(stmts []ast.Statement) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
@@ -318,5 +322,6 @@ testIntegerLiteral	parser/helpers_test.go	/^func testIntegerLiteral(t *testing.T
 testIntegerObject	eval/int_test.go	/^func testIntegerObject(t *testing.T, obj object.Object, expected int64) bool {$/;"	f	package:eval	typeref:typename:bool
 testLetStatement	parser/helpers_test.go	/^func testLetStatement(t *testing.T, s ast.Statement, name string) bool {$/;"	f	package:parser	typeref:typename:bool
 testLiteralExpression	parser/helpers_test.go	/^func testLiteralExpression($/;"	f	package:parser	typeref:typename:bool
+testNullObject	eval/helpers_test.go	/^func testNullObject(t *testing.T, obj object.Object) bool {$/;"	f	package:eval	typeref:typename:bool
 token	token/consts.go	/^package token$/;"	p
 token	token/token.go	/^package token$/;"	p
