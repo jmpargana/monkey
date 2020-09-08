@@ -6,7 +6,7 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	0.0.0	/36a6dd19/
+!_TAG_PROGRAM_VERSION	0.0.0	/717028d4/
 ARRAY_OBJ	object/object.go	/^	ARRAY_OBJ        = "ARRAY"$/;"	c	package:object
 ASSIGN	token/consts.go	/^	ASSIGN   = "="$/;"	c	package:token
 ASTERISK	token/consts.go	/^	ASTERISK = "*"$/;"	c	package:token
@@ -25,6 +25,7 @@ Boolean	object/bool.go	/^type Boolean struct {$/;"	s	package:object
 Builtin	object/builtin.go	/^type Builtin struct {$/;"	s	package:object
 BuiltinFunction	object/builtin.go	/^type BuiltinFunction func(args ...Object) Object$/;"	t	package:object	typeref:typename:func(args ...Object) Object
 CALL	parser/vars.go	/^	CALL        \/\/ myFunction(X)$/;"	c	package:parser
+COLON	token/consts.go	/^	COLON     = ":"$/;"	c	package:token
 COMMA	token/consts.go	/^	COMMA     = ","$/;"	c	package:token
 CallExpression	ast/call.go	/^type CallExpression struct {$/;"	s	package:ast
 Condition	ast/if.go	/^	Condition                Expression$/;"	m	struct:ast.IfExpression	typeref:typename:Expression
@@ -54,6 +55,16 @@ Function	object/func.go	/^type Function struct {$/;"	s	package:object
 FunctionLiteral	ast/fn.go	/^type FunctionLiteral struct {$/;"	s	package:ast
 GT	token/consts.go	/^	GT  = ">"$/;"	c	package:token
 Get	object/env.go	/^func (e *Environment) Get(name string) (Object, bool) {$/;"	f	struct:object.Environment	typeref:typename:(Object, bool)
+HASH_OBJ	object/object.go	/^	HASH_OBJ         = "HASH"$/;"	c	package:object
+Hash	object/hash.go	/^type Hash struct {$/;"	s	package:object
+HashKey	object/hash_key.go	/^func (b *Boolean) HashKey() HashKey {$/;"	f	unknown:object.Boolean	typeref:typename:HashKey
+HashKey	object/hash_key.go	/^func (i *Integer) HashKey() HashKey {$/;"	f	unknown:object.Integer	typeref:typename:HashKey
+HashKey	object/hash_key.go	/^func (s *String) HashKey() HashKey {$/;"	f	unknown:object.String	typeref:typename:HashKey
+HashKey	object/hash_key.go	/^type HashKey struct {$/;"	s	package:object
+HashKey	object/hashable.go	/^	HashKey() HashKey$/;"	n	interface:object.Hashable	typeref:typename:HashKey
+HashLiteral	ast/hash.go	/^type HashLiteral struct {$/;"	s	package:ast
+HashPair	object/hash_pair.go	/^type HashPair struct {$/;"	s	package:object
+Hashable	object/hashable.go	/^type Hashable interface {$/;"	i	package:object
 IDENT	token/consts.go	/^	IDENT = "IDENT" \/\/ add, foobar, x, y, ...$/;"	c	package:token
 IF	token/consts.go	/^	IF       = "IF"$/;"	c	package:token
 ILLEGAL	token/consts.go	/^	ILLEGAL = "ILLEGAL"$/;"	c	package:token
@@ -70,6 +81,7 @@ Inspect	object/bool.go	/^func (b *Boolean) Inspect() string  { return fmt.Sprint
 Inspect	object/builtin.go	/^func (b *Builtin) Inspect() string  { return "builtin function" }$/;"	f	struct:object.Builtin	typeref:typename:string
 Inspect	object/err.go	/^func (e *Error) Inspect() string  { return "ERROR: " + e.Message }$/;"	f	struct:object.Error	typeref:typename:string
 Inspect	object/func.go	/^func (f *Function) Inspect() string {$/;"	f	struct:object.Function	typeref:typename:string
+Inspect	object/hash.go	/^func (h *Hash) Inspect() string {$/;"	f	struct:object.Hash	typeref:typename:string
 Inspect	object/int.go	/^func (i *Integer) Inspect() string { return fmt.Sprintf("%d", i.Value) }$/;"	f	struct:object.Integer	typeref:typename:string
 Inspect	object/null.go	/^func (n *Null) Inspect() string  { return "null" }$/;"	f	struct:object.Null	typeref:typename:string
 Inspect	object/object.go	/^	Inspect() string$/;"	n	interface:object.Object	typeref:typename:string
@@ -77,6 +89,7 @@ Inspect	object/return.go	/^func (rv *ReturnValue) Inspect() string  { return rv.
 Inspect	object/str.go	/^func (s *String) Inspect() string  { return s.Value }$/;"	f	struct:object.String	typeref:typename:string
 Integer	object/int.go	/^type Integer struct {$/;"	s	package:object
 IntegerLiteral	ast/int.go	/^type IntegerLiteral struct {$/;"	s	package:ast
+Key	object/hash_pair.go	/^	Key   Object$/;"	m	struct:object.HashPair	typeref:typename:Object
 LBRACE	token/consts.go	/^	LBRACE   = "{"$/;"	c	package:token
 LBRACKET	token/consts.go	/^	LBRACKET = "["$/;"	c	package:token
 LESSGREATER	parser/vars.go	/^	LESSGREATER \/\/ > or <$/;"	c	package:parser
@@ -111,6 +124,8 @@ PLUS	token/consts.go	/^	PLUS     = "+"$/;"	c	package:token
 PREFIX	parser/vars.go	/^	PREFIX      \/\/ -X or !X$/;"	c	package:parser
 PRODUCT	parser/vars.go	/^	PRODUCT     \/\/ *$/;"	c	package:parser
 PROMPT	repl/repl.go	/^const PROMPT = ">> "$/;"	c	package:repl
+Pairs	ast/hash.go	/^	Pairs map[Expression]Expression$/;"	m	struct:ast.HashLiteral	typeref:typename:map[Expression]Expression
+Pairs	object/hash.go	/^	Pairs map[HashKey]HashPair$/;"	m	struct:object.Hash	typeref:typename:map[HashKey]HashPair
 Parameters	ast/fn.go	/^	Parameters []*Identifier$/;"	m	struct:ast.FunctionLiteral	typeref:typename:[]*Identifier
 Parameters	object/func.go	/^	Parameters []*ast.Identifier$/;"	m	struct:object.Function	typeref:typename:[]*ast.Identifier
 ParseProgram	parser/parser.go	/^func (p *Parser) ParseProgram() *ast.Program {$/;"	f	struct:parser.Parser	typeref:typename:*ast.Program
@@ -143,6 +158,7 @@ String	ast/bool.go	/^func (b *Boolean) String() string       { return b.Token.Li
 String	ast/call.go	/^func (ce *CallExpression) String() string {$/;"	f	struct:ast.CallExpression	typeref:typename:string
 String	ast/expr.go	/^func (es *ExpressionStatement) String() string {$/;"	f	struct:ast.ExpressionStatement	typeref:typename:string
 String	ast/fn.go	/^func (fl *FunctionLiteral) String() string {$/;"	f	struct:ast.FunctionLiteral	typeref:typename:string
+String	ast/hash.go	/^func (hl *HashLiteral) String() string {$/;"	f	struct:ast.HashLiteral	typeref:typename:string
 String	ast/ident.go	/^func (i *Identifier) String() string { return i.Value }$/;"	f	struct:ast.Identifier	typeref:typename:string
 String	ast/if.go	/^func (ie *IfExpression) String() string {$/;"	f	struct:ast.IfExpression	typeref:typename:string
 String	ast/index.go	/^func (ie *IndexExpression) String() string {$/;"	f	struct:ast.IndexExpression	typeref:typename:string
@@ -171,6 +187,8 @@ TestFunctionApplication	eval/func_test.go	/^func TestFunctionApplication(t *test
 TestFunctionLiteralParsing	parser/fn_test.go	/^func TestFunctionLiteralParsing(t *testing.T) {$/;"	f	package:parser
 TestFunctionObject	eval/func_test.go	/^func TestFunctionObject(t *testing.T) {$/;"	f	package:eval
 TestFunctionParameterParsing	parser/fn_test.go	/^func TestFunctionParameterParsing(t *testing.T) {$/;"	f	package:parser
+TestHashIndexExpressions	eval/hash_test.go	/^func TestHashIndexExpressions(t *testing.T) {$/;"	f	package:eval
+TestHashLiterals	eval/hash_test.go	/^func TestHashLiterals(t *testing.T) {$/;"	f	package:eval
 TestIdentifierExpression	parser/ident_test.go	/^func TestIdentifierExpression(t *testing.T) {$/;"	f	package:parser
 TestIfElseExpressions	eval/if_test.go	/^func TestIfElseExpressions(t *testing.T) {$/;"	f	package:eval
 TestIfExpression	parser/if_test.go	/^func TestIfExpression(t *testing.T) {$/;"	f	package:parser
@@ -180,6 +198,9 @@ TestLetStatements	eval/let_test.go	/^func TestLetStatements(t *testing.T) {$/;"	
 TestNextToken	lexer/lexer_test.go	/^func TestNextToken(t *testing.T) {$/;"	f	package:lexer
 TestOperatorPrecedenceParsing	parser/precedence_test.go	/^func TestOperatorPrecedenceParsing(t *testing.T) {$/;"	f	package:parser
 TestParsingArrayLiterals	parser/array_test.go	/^func TestParsingArrayLiterals(t *testing.T) {$/;"	f	package:parser
+TestParsingEmptyHashLiteral	parser/hash_test.go	/^func TestParsingEmptyHashLiteral(t *testing.T) {$/;"	f	package:parser
+TestParsingHashLiteralsStringKeys	parser/hash_test.go	/^func TestParsingHashLiteralsStringKeys(t *testing.T) {$/;"	f	package:parser
+TestParsingHashLiteralsWithExpressions	parser/hash_test.go	/^func TestParsingHashLiteralsWithExpressions(t *testing.T) {$/;"	f	package:parser
 TestParsingIndexExpressions	parser/index_test.go	/^func TestParsingIndexExpressions(t *testing.T) {$/;"	f	package:parser
 TestParsingInfixExpressions	parser/infix_test.go	/^func TestParsingInfixExpressions(t *testing.T) {$/;"	f	package:parser
 TestParsingPrefixExpressions	parser/prefix_test.go	/^func TestParsingPrefixExpressions(t *testing.T) {$/;"	f	package:parser
@@ -187,6 +208,7 @@ TestReturnStatements	eval/return_test.go	/^func TestReturnStatements(t *testing.
 TestReturnStatements	parser/return_test.go	/^func TestReturnStatements(t *testing.T) {$/;"	f	package:parser
 TestString	ast/ast_test.go	/^func TestString(t *testing.T) {$/;"	f	package:ast
 TestStringConcatenation	eval/str_test.go	/^func TestStringConcatenation(t *testing.T) {$/;"	f	package:eval
+TestStringHashKey	object/hash_test.go	/^func TestStringHashKey(t *testing.T) {$/;"	f	package:object
 TestStringLiteral	eval/str_test.go	/^func TestStringLiteral(t *testing.T) {$/;"	f	package:eval
 TestStringLiteralEAxpression	parser/str_test.go	/^func TestStringLiteralEAxpression(t *testing.T) {$/;"	f	package:parser
 Token	ast/array.go	/^	Token    token.Token \/\/ the '[' token$/;"	m	struct:ast.ArrayLiteral	typeref:typename:token.Token
@@ -195,6 +217,7 @@ Token	ast/bool.go	/^	Token token.Token$/;"	m	struct:ast.Boolean	typeref:typename
 Token	ast/call.go	/^	Token     token.Token$/;"	m	struct:ast.CallExpression	typeref:typename:token.Token
 Token	ast/expr.go	/^	Token      token.Token$/;"	m	struct:ast.ExpressionStatement	typeref:typename:token.Token
 Token	ast/fn.go	/^	Token      token.Token$/;"	m	struct:ast.FunctionLiteral	typeref:typename:token.Token
+Token	ast/hash.go	/^	Token token.Token \/\/ the '{' token$/;"	m	struct:ast.HashLiteral	typeref:typename:token.Token
 Token	ast/ident.go	/^	Token token.Token$/;"	m	struct:ast.Identifier	typeref:typename:token.Token
 Token	ast/if.go	/^	Token                    token.Token$/;"	m	struct:ast.IfExpression	typeref:typename:token.Token
 Token	ast/index.go	/^	Token token.Token$/;"	m	struct:ast.IndexExpression	typeref:typename:token.Token
@@ -211,6 +234,7 @@ TokenLiteral	ast/bool.go	/^func (b *Boolean) TokenLiteral() string { return b.To
 TokenLiteral	ast/call.go	/^func (ce *CallExpression) TokenLiteral() string { return ce.Token.Literal }$/;"	f	struct:ast.CallExpression	typeref:typename:string
 TokenLiteral	ast/expr.go	/^func (es *ExpressionStatement) TokenLiteral() string { return es.Token.Literal }$/;"	f	struct:ast.ExpressionStatement	typeref:typename:string
 TokenLiteral	ast/fn.go	/^func (fl *FunctionLiteral) TokenLiteral() string { return fl.Token.Literal }$/;"	f	struct:ast.FunctionLiteral	typeref:typename:string
+TokenLiteral	ast/hash.go	/^func (hl *HashLiteral) TokenLiteral() string { return hl.Token.Literal }$/;"	f	struct:ast.HashLiteral	typeref:typename:string
 TokenLiteral	ast/ident.go	/^func (i *Identifier) TokenLiteral() string { return i.Token.Literal }$/;"	f	struct:ast.Identifier	typeref:typename:string
 TokenLiteral	ast/if.go	/^func (ie *IfExpression) TokenLiteral() string { return ie.Token.Literal }$/;"	f	struct:ast.IfExpression	typeref:typename:string
 TokenLiteral	ast/index.go	/^func (ie *IndexExpression) TokenLiteral() string { return ie.Token.Literal }$/;"	f	struct:ast.IndexExpression	typeref:typename:string
@@ -228,6 +252,8 @@ Type	object/bool.go	/^func (b *Boolean) Type() ObjectType { return BOOLEAN_OBJ }
 Type	object/builtin.go	/^func (b *Builtin) Type() ObjectType { return BUILTIN_OBJ }$/;"	f	struct:object.Builtin	typeref:typename:ObjectType
 Type	object/err.go	/^func (e *Error) Type() ObjectType { return ERROR_OBJ }$/;"	f	struct:object.Error	typeref:typename:ObjectType
 Type	object/func.go	/^func (f *Function) Type() ObjectType { return FUNCTION_OBJ }$/;"	f	struct:object.Function	typeref:typename:ObjectType
+Type	object/hash.go	/^func (h *Hash) Type() ObjectType { return HASH_OBJ }$/;"	f	struct:object.Hash	typeref:typename:ObjectType
+Type	object/hash_key.go	/^	Type  ObjectType$/;"	m	struct:object.HashKey	typeref:typename:ObjectType
 Type	object/int.go	/^func (i *Integer) Type() ObjectType { return INTEGER_OBJ }$/;"	f	struct:object.Integer	typeref:typename:ObjectType
 Type	object/null.go	/^func (n *Null) Type() ObjectType { return NULL_OBJ }$/;"	f	struct:object.Null	typeref:typename:ObjectType
 Type	object/object.go	/^	Type() ObjectType$/;"	n	interface:object.Object	typeref:typename:ObjectType
@@ -241,6 +267,8 @@ Value	ast/int.go	/^	Value int64$/;"	m	struct:ast.IntegerLiteral	typeref:typename
 Value	ast/let.go	/^	Value Expression$/;"	m	struct:ast.LetStatement	typeref:typename:Expression
 Value	ast/str.go	/^	Value string$/;"	m	struct:ast.StringLiteral	typeref:typename:string
 Value	object/bool.go	/^	Value bool$/;"	m	struct:object.Boolean	typeref:typename:bool
+Value	object/hash_key.go	/^	Value uint64$/;"	m	struct:object.HashKey	typeref:typename:uint64
+Value	object/hash_pair.go	/^	Value Object$/;"	m	struct:object.HashPair	typeref:typename:Object
 Value	object/int.go	/^	Value int64$/;"	m	struct:object.Integer	typeref:typename:int64
 Value	object/return.go	/^	Value Object$/;"	m	struct:object.ReturnValue	typeref:typename:Object
 Value	object/str.go	/^	Value string$/;"	m	struct:object.String	typeref:typename:string
@@ -253,6 +281,7 @@ ast	ast/bool.go	/^package ast$/;"	p
 ast	ast/call.go	/^package ast$/;"	p
 ast	ast/expr.go	/^package ast$/;"	p
 ast	ast/fn.go	/^package ast$/;"	p
+ast	ast/hash.go	/^package ast$/;"	p
 ast	ast/ident.go	/^package ast$/;"	p
 ast	ast/if.go	/^package ast$/;"	p
 ast	ast/index.go	/^package ast$/;"	p
@@ -282,6 +311,8 @@ eval	eval/err_test.go	/^package eval$/;"	p
 eval	eval/eval.go	/^package eval$/;"	p
 eval	eval/func.go	/^package eval$/;"	p
 eval	eval/func_test.go	/^package eval$/;"	p
+eval	eval/hash.go	/^package eval$/;"	p
+eval	eval/hash_test.go	/^package eval$/;"	p
 eval	eval/helpers_test.go	/^package eval$/;"	p
 eval	eval/ident.go	/^package eval$/;"	p
 eval	eval/if.go	/^package eval$/;"	p
@@ -301,6 +332,8 @@ evalArrayIndexExpression	eval/index.go	/^func evalArrayIndexExpression(array, in
 evalBangOperatorExpression	eval/prefix.go	/^func evalBangOperatorExpression(right object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
 evalBlockStatement	eval/block_statement.go	/^func evalBlockStatement(block *ast.BlockStatement, env *object.Environment) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
 evalExpressions	eval/func.go	/^func evalExpressions($/;"	f	package:eval	typeref:typename:[]object.Object
+evalHashIndexExpression	eval/hash.go	/^func evalHashIndexExpression(hash, index object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+evalHashLiteral	eval/hash.go	/^func evalHashLiteral($/;"	f	package:eval	typeref:typename:object.Object
 evalIdentifier	eval/ident.go	/^func evalIdentifier($/;"	f	package:eval	typeref:typename:object.Object
 evalIfExpression	eval/if.go	/^func evalIfExpression(ie *ast.IfExpression, env *object.Environment) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
 evalIndexExpression	eval/index.go	/^func evalIndexExpression(left, index object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
@@ -316,6 +349,7 @@ expressionNode	ast/array.go	/^func (al *ArrayLiteral) expressionNode()      {}$/
 expressionNode	ast/bool.go	/^func (b *Boolean) expressionNode()      {}$/;"	f	struct:ast.Boolean
 expressionNode	ast/call.go	/^func (ce *CallExpression) expressionNode()      {}$/;"	f	struct:ast.CallExpression
 expressionNode	ast/fn.go	/^func (fl *FunctionLiteral) expressionNode()      {}$/;"	f	struct:ast.FunctionLiteral
+expressionNode	ast/hash.go	/^func (hl *HashLiteral) expressionNode()      {}$/;"	f	struct:ast.HashLiteral
 expressionNode	ast/ident.go	/^func (i *Identifier) expressionNode()      {}$/;"	f	struct:ast.Identifier
 expressionNode	ast/if.go	/^func (ie *IfExpression) expressionNode()      {}$/;"	f	struct:ast.IfExpression
 expressionNode	ast/index.go	/^func (ie *IndexExpression) expressionNode()      {}$/;"	f	struct:ast.IndexExpression
@@ -351,6 +385,11 @@ object	object/builtin.go	/^package object$/;"	p
 object	object/env.go	/^package object$/;"	p
 object	object/err.go	/^package object$/;"	p
 object	object/func.go	/^package object$/;"	p
+object	object/hash.go	/^package object$/;"	p
+object	object/hash_key.go	/^package object$/;"	p
+object	object/hash_pair.go	/^package object$/;"	p
+object	object/hash_test.go	/^package object$/;"	p
+object	object/hashable.go	/^package object$/;"	p
 object	object/int.go	/^package object$/;"	p
 object	object/null.go	/^package object$/;"	p
 object	object/object.go	/^package object$/;"	p
@@ -368,6 +407,7 @@ parseExpressionStatement	parser/expr.go	/^func (p *Parser) parseExpressionStatem
 parseFunctionLiteral	parser/fn.go	/^func (p *Parser) parseFunctionLiteral() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
 parseFunctionParameters	parser/fn.go	/^func (p *Parser) parseFunctionParameters() []*ast.Identifier {$/;"	f	unknown:parser.Parser	typeref:typename:[]*ast.Identifier
 parseGroupedExpression	parser/helpers.go	/^func (p *Parser) parseGroupedExpression() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
+parseHashLiteral	parser/hash.go	/^func (p *Parser) parseHashLiteral() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
 parseIdentifier	parser/ident.go	/^func (p *Parser) parseIdentifier() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
 parseIfExpression	parser/if.go	/^func (p *Parser) parseIfExpression() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
 parseIndexExpression	parser/index.go	/^func (p *Parser) parseIndexExpression(left ast.Expression) ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
@@ -389,6 +429,8 @@ parser	parser/errors_test.go	/^package parser$/;"	p
 parser	parser/expr.go	/^package parser$/;"	p
 parser	parser/fn.go	/^package parser$/;"	p
 parser	parser/fn_test.go	/^package parser$/;"	p
+parser	parser/hash.go	/^package parser$/;"	p
+parser	parser/hash_test.go	/^package parser$/;"	p
 parser	parser/helpers.go	/^package parser$/;"	p
 parser	parser/helpers_test.go	/^package parser$/;"	p
 parser	parser/ident.go	/^package parser$/;"	p
