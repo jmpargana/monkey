@@ -6,7 +6,7 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	0.0.0	/717028d4/
+!_TAG_PROGRAM_VERSION	0.0.0	/b43eb398/
 ARRAY_OBJ	object/object.go	/^	ARRAY_OBJ        = "ARRAY"$/;"	c	package:object
 ASSIGN	token/consts.go	/^	ASSIGN   = "="$/;"	c	package:token
 ASTERISK	token/consts.go	/^	ASTERISK = "*"$/;"	c	package:token
@@ -24,12 +24,18 @@ Boolean	ast/bool.go	/^type Boolean struct {$/;"	s	package:ast
 Boolean	object/bool.go	/^type Boolean struct {$/;"	s	package:object
 Builtin	object/builtin.go	/^type Builtin struct {$/;"	s	package:object
 BuiltinFunction	object/builtin.go	/^type BuiltinFunction func(args ...Object) Object$/;"	t	package:object	typeref:typename:func(args ...Object) Object
+Bytecode	compiler/compiler.go	/^func (c *Compiler) Bytecode() *Bytecode {$/;"	f	struct:compiler.Compiler	typeref:typename:*Bytecode
+Bytecode	compiler/compiler.go	/^type Bytecode struct {$/;"	s	package:compiler
 CALL	parser/vars.go	/^	CALL        \/\/ myFunction(X)$/;"	c	package:parser
 COLON	token/consts.go	/^	COLON     = ":"$/;"	c	package:token
 COMMA	token/consts.go	/^	COMMA     = ","$/;"	c	package:token
 CallExpression	ast/call.go	/^type CallExpression struct {$/;"	s	package:ast
+Compile	compiler/compiler.go	/^func (c *Compiler) Compile(node ast.Node) error {$/;"	f	struct:compiler.Compiler	typeref:typename:error
+Compiler	compiler/compiler.go	/^type Compiler struct {$/;"	s	package:compiler
 Condition	ast/if.go	/^	Condition                Expression$/;"	m	struct:ast.IfExpression	typeref:typename:Expression
 Consequence	ast/if.go	/^	Consequence, Alternative *BlockStatement$/;"	m	struct:ast.IfExpression	typeref:typename:*BlockStatement
+Constants	compiler/compiler.go	/^	Constants    []object.Object$/;"	m	struct:compiler.Bytecode	typeref:typename:[]object.Object
+Definition	code/def.go	/^type Definition struct {$/;"	s	package:code
 ELSE	token/consts.go	/^	ELSE     = "ELSE"$/;"	c	package:token
 EOF	token/consts.go	/^	EOF     = "EOF"$/;"	c	package:token
 EQ	token/consts.go	/^	EQ  = "=="$/;"	c	package:token
@@ -87,6 +93,8 @@ Inspect	object/null.go	/^func (n *Null) Inspect() string  { return "null" }$/;"	
 Inspect	object/object.go	/^	Inspect() string$/;"	n	interface:object.Object	typeref:typename:string
 Inspect	object/return.go	/^func (rv *ReturnValue) Inspect() string  { return rv.Value.Inspect() }$/;"	f	struct:object.ReturnValue	typeref:typename:string
 Inspect	object/str.go	/^func (s *String) Inspect() string  { return s.Value }$/;"	f	struct:object.String	typeref:typename:string
+Instructions	code/instructions.go	/^type Instructions []byte$/;"	t	package:code	typeref:typename:[]byte
+Instructions	compiler/compiler.go	/^	Instructions code.Instructions$/;"	m	struct:compiler.Bytecode	typeref:typename:code.Instructions
 Integer	object/int.go	/^type Integer struct {$/;"	s	package:object
 IntegerLiteral	ast/int.go	/^type IntegerLiteral struct {$/;"	s	package:ast
 Key	object/hash_pair.go	/^	Key   Object$/;"	m	struct:object.HashPair	typeref:typename:Object
@@ -102,15 +110,20 @@ Left	ast/infix.go	/^	Left     Expression$/;"	m	struct:ast.InfixExpression	typere
 LetStatement	ast/let.go	/^type LetStatement struct {$/;"	s	package:ast
 Lexer	lexer/lexer.go	/^type Lexer struct {$/;"	s	package:lexer
 Literal	token/token.go	/^	Literal string$/;"	m	struct:token.Token	typeref:typename:string
+Lookup	code/def.go	/^func Lookup(op byte) (*Definition, error) {$/;"	f	package:code	typeref:typename:(*Definition, error)
 LookupIdent	token/token.go	/^func LookupIdent(ident string) TokenType {$/;"	f	package:token	typeref:typename:TokenType
 MINUS	token/consts.go	/^	MINUS    = "-"$/;"	c	package:token
 MONKEY_FACE	repl/monkey.go	/^const MONKEY_FACE = `		$/;"	c	package:repl
+Make	code/make.go	/^func Make(op Opcode, operands ...int) []byte {$/;"	f	package:code	typeref:typename:[]byte
 Message	object/err.go	/^	Message string$/;"	m	struct:object.Error	typeref:typename:string
 NULL	eval/eval.go	/^	NULL  = &object.Null{}$/;"	v	package:eval
 NULL_OBJ	object/object.go	/^	NULL_OBJ         = "NULL"$/;"	c	package:object
 Name	ast/let.go	/^	Name  *Identifier$/;"	m	struct:ast.LetStatement	typeref:typename:*Identifier
+Name	code/def.go	/^	Name          string$/;"	m	struct:code.Definition	typeref:typename:string
+New	compiler/compiler.go	/^func New() *Compiler {$/;"	f	package:compiler	typeref:typename:*Compiler
 New	lexer/lexer.go	/^func New(input string) *Lexer {$/;"	f	package:lexer	typeref:typename:*Lexer
 New	parser/parser.go	/^func New(l *lexer.Lexer) *Parser {$/;"	f	package:parser	typeref:typename:*Parser
+New	vm/vm.go	/^func New(bytecode *compiler.Bytecode) *VM {$/;"	f	package:vm	typeref:typename:*VM
 NewEnclosedEnvironment	object/env.go	/^func NewEnclosedEnvironment(outer *Environment) *Environment {$/;"	f	package:object	typeref:typename:*Environment
 NewEnvironment	object/env.go	/^func NewEnvironment() *Environment {$/;"	f	package:object	typeref:typename:*Environment
 NextToken	lexer/public.go	/^func (l *Lexer) NextToken() token.Token {$/;"	f	unknown:lexer.Lexer	typeref:typename:token.Token
@@ -118,6 +131,10 @@ Node	ast/node.go	/^type Node interface {$/;"	i	package:ast
 Null	object/null.go	/^type Null struct{}$/;"	s	package:object
 Object	object/object.go	/^type Object interface {$/;"	i	package:object
 ObjectType	object/object.go	/^type ObjectType string$/;"	t	package:object	typeref:typename:string
+OpAdd	code/opcodes.go	/^	OpAdd$/;"	c	package:code
+OpConstant	code/opcodes.go	/^	OpConstant Opcode = iota$/;"	c	package:code	typeref:type:Opcode
+Opcode	code/opcodes.go	/^type Opcode byte$/;"	t	package:code	typeref:typename:byte
+OperandWidths	code/def.go	/^	OperandWidths []int$/;"	m	struct:code.Definition	typeref:typename:[]int
 Operator	ast/infix.go	/^	Operator string$/;"	m	struct:ast.InfixExpression	typeref:typename:string
 Operator	ast/prefix.go	/^	Operator string$/;"	m	struct:ast.PrefixExpression	typeref:typename:string
 PLUS	token/consts.go	/^	PLUS     = "+"$/;"	c	package:token
@@ -137,17 +154,22 @@ RBRACKET	token/consts.go	/^	RBRACKET = "]"$/;"	c	package:token
 RETURN	token/consts.go	/^	RETURN   = "RETURN"$/;"	c	package:token
 RETURN_VALUE_OBJ	object/object.go	/^	RETURN_VALUE_OBJ = "RETURN_VALUE"$/;"	c	package:object
 RPAREN	token/consts.go	/^	RPAREN   = ")"$/;"	c	package:token
+ReadOperands	code/operands.go	/^func ReadOperands(def *Definition, ins Instructions) ([]int, int) {$/;"	f	package:code	typeref:typename:([]int, int)
+ReadUint16	code/operands.go	/^func ReadUint16(ins Instructions) uint16 {$/;"	f	package:code	typeref:typename:uint16
 ReturnStatement	ast/return.go	/^type ReturnStatement struct {$/;"	s	package:ast
 ReturnValue	ast/return.go	/^	ReturnValue Expression$/;"	m	struct:ast.ReturnStatement	typeref:typename:Expression
 ReturnValue	object/return.go	/^type ReturnValue struct {$/;"	s	package:object
 Right	ast/infix.go	/^	Right    Expression$/;"	m	struct:ast.InfixExpression	typeref:typename:Expression
 Right	ast/prefix.go	/^	Right    Expression$/;"	m	struct:ast.PrefixExpression	typeref:typename:Expression
+Run	vm/vm.go	/^func (vm *VM) Run() error {$/;"	f	struct:vm.VM	typeref:typename:error
 SEMICOLON	token/consts.go	/^	SEMICOLON = ";"$/;"	c	package:token
 SPLASH	token/consts.go	/^	SPLASH   = "\/"$/;"	c	package:token
 STRING	token/consts.go	/^	STRING   = "STRING"$/;"	c	package:token
 STRING_OBJ	object/object.go	/^	STRING_OBJ       = "STRING"$/;"	c	package:object
 SUM	parser/vars.go	/^	SUM         \/\/ +$/;"	c	package:parser
 Set	object/env.go	/^func (e *Environment) Set(name string, val Object) Object {$/;"	f	struct:object.Environment	typeref:typename:Object
+StackSize	vm/vm.go	/^const StackSize = 2048$/;"	c	package:vm
+StackTop	vm/vm.go	/^func (vm *VM) StackTop() object.Object {$/;"	f	struct:vm.VM	typeref:typename:object.Object
 Start	repl/repl.go	/^func Start(in io.Reader, out io.Writer) {$/;"	f	package:repl
 Statement	ast/node.go	/^type Statement interface {$/;"	i	package:ast
 Statements	ast/block.go	/^	Statements []Statement$/;"	m	struct:ast.BlockStatement	typeref:typename:[]Statement
@@ -170,6 +192,7 @@ String	ast/prefix.go	/^func (pe *PrefixExpression) String() string {$/;"	f	struc
 String	ast/program.go	/^func (p *Program) String() string {$/;"	f	struct:ast.Program	typeref:typename:string
 String	ast/return.go	/^func (rs *ReturnStatement) String() string {$/;"	f	struct:ast.ReturnStatement	typeref:typename:string
 String	ast/str.go	/^func (sl *StringLiteral) String() string       { return sl.Token.Literal }$/;"	f	struct:ast.StringLiteral	typeref:typename:string
+String	code/instructions.go	/^func (ins Instructions) String() string {$/;"	f	type:code.Instructions	typeref:typename:string
 String	object/str.go	/^type String struct {$/;"	s	package:object
 StringLiteral	ast/str.go	/^type StringLiteral struct {$/;"	s	package:ast
 TRUE	eval/eval.go	/^	TRUE  = &object.Boolean{Value: true}$/;"	v	package:eval
@@ -192,9 +215,13 @@ TestHashLiterals	eval/hash_test.go	/^func TestHashLiterals(t *testing.T) {$/;"	f
 TestIdentifierExpression	parser/ident_test.go	/^func TestIdentifierExpression(t *testing.T) {$/;"	f	package:parser
 TestIfElseExpressions	eval/if_test.go	/^func TestIfElseExpressions(t *testing.T) {$/;"	f	package:eval
 TestIfExpression	parser/if_test.go	/^func TestIfExpression(t *testing.T) {$/;"	f	package:parser
+TestInstructionsString	code/instructions_test.go	/^func TestInstructionsString(t *testing.T) {$/;"	f	package:code
+TestIntegerArithmetic	compiler/compiler_test.go	/^func TestIntegerArithmetic(t *testing.T) {$/;"	f	package:compiler
+TestIntegerArithmetic	vm/int_test.go	/^func TestIntegerArithmetic(t *testing.T) {$/;"	f	package:vm
 TestIntegerLiteralExpression	parser/int_test.go	/^func TestIntegerLiteralExpression(t *testing.T) {$/;"	f	package:parser
 TestLetStaments	parser/let_test.go	/^func TestLetStaments(t *testing.T) {$/;"	f	package:parser
 TestLetStatements	eval/let_test.go	/^func TestLetStatements(t *testing.T) {$/;"	f	package:eval
+TestMake	code/make_test.go	/^func TestMake(t *testing.T) {$/;"	f	package:code
 TestNextToken	lexer/lexer_test.go	/^func TestNextToken(t *testing.T) {$/;"	f	package:lexer
 TestOperatorPrecedenceParsing	parser/precedence_test.go	/^func TestOperatorPrecedenceParsing(t *testing.T) {$/;"	f	package:parser
 TestParsingArrayLiterals	parser/array_test.go	/^func TestParsingArrayLiterals(t *testing.T) {$/;"	f	package:parser
@@ -204,6 +231,7 @@ TestParsingHashLiteralsWithExpressions	parser/hash_test.go	/^func TestParsingHas
 TestParsingIndexExpressions	parser/index_test.go	/^func TestParsingIndexExpressions(t *testing.T) {$/;"	f	package:parser
 TestParsingInfixExpressions	parser/infix_test.go	/^func TestParsingInfixExpressions(t *testing.T) {$/;"	f	package:parser
 TestParsingPrefixExpressions	parser/prefix_test.go	/^func TestParsingPrefixExpressions(t *testing.T) {$/;"	f	package:parser
+TestReadOperands	code/operands_test.go	/^func TestReadOperands(t *testing.T) {$/;"	f	package:code
 TestReturnStatements	eval/return_test.go	/^func TestReturnStatements(t *testing.T) {$/;"	f	package:eval
 TestReturnStatements	parser/return_test.go	/^func TestReturnStatements(t *testing.T) {$/;"	f	package:parser
 TestString	ast/ast_test.go	/^func TestString(t *testing.T) {$/;"	f	package:ast
@@ -261,6 +289,7 @@ Type	object/return.go	/^func (rv *ReturnValue) Type() ObjectType { return RETURN
 Type	object/str.go	/^func (s *String) Type() ObjectType { return STRING_OBJ }$/;"	f	struct:object.String	typeref:typename:ObjectType
 Type	token/token.go	/^	Type    TokenType$/;"	m	struct:token.Token	typeref:typename:TokenType
 UEQ	token/consts.go	/^	UEQ = "!="$/;"	c	package:token
+VM	vm/vm.go	/^type VM struct {$/;"	s	package:vm
 Value	ast/bool.go	/^	Value bool$/;"	m	struct:ast.Boolean	typeref:typename:bool
 Value	ast/ident.go	/^	Value string$/;"	m	struct:ast.Identifier	typeref:typename:string
 Value	ast/int.go	/^	Value int64$/;"	m	struct:ast.IntegerLiteral	typeref:typename:int64
@@ -273,6 +302,8 @@ Value	object/int.go	/^	Value int64$/;"	m	struct:object.Integer	typeref:typename:
 Value	object/return.go	/^	Value Object$/;"	m	struct:object.ReturnValue	typeref:typename:Object
 Value	object/str.go	/^	Value string$/;"	m	struct:object.String	typeref:typename:string
 _	parser/vars.go	/^	_ int = iota$/;"	c	package:parser	typeref:typename:int
+addConstant	compiler/compiler.go	/^func (c *Compiler) addConstant(obj object.Object) int {$/;"	f	struct:compiler.Compiler	typeref:typename:int
+addInstruction	compiler/compiler.go	/^func (c *Compiler) addInstruction(ins []byte) int {$/;"	f	struct:compiler.Compiler	typeref:typename:int
 applyFunction	eval/func.go	/^func applyFunction(fn object.Object, args []object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
 ast	ast/array.go	/^package ast$/;"	p
 ast	ast/ast_test.go	/^package ast$/;"	p
@@ -296,9 +327,26 @@ ast	ast/str.go	/^package ast$/;"	p
 builtins	eval/builtin.go	/^var builtins = map[string]*object.Builtin{$/;"	v	package:eval
 ch	lexer/lexer.go	/^	ch           byte \/\/ current char under examination$/;"	m	struct:lexer.Lexer	typeref:typename:byte
 checkParseErrors	parser/errors_test.go	/^func checkParseErrors(t *testing.T, p *Parser) {$/;"	f	package:parser
+code	code/def.go	/^package code$/;"	p
+code	code/instructions.go	/^package code$/;"	p
+code	code/instructions_test.go	/^package code$/;"	p
+code	code/make.go	/^package code$/;"	p
+code	code/make_test.go	/^package code$/;"	p
+code	code/opcodes.go	/^package code$/;"	p
+code	code/operands.go	/^package code$/;"	p
+code	code/operands_test.go	/^package code$/;"	p
+compiler	compiler/compiler.go	/^package compiler$/;"	p
+compiler	compiler/compiler_test.go	/^package compiler$/;"	p
+compiler	compiler/helpers_test.go	/^package compiler$/;"	p
+compilerTestCase	compiler/compiler_test.go	/^type compilerTestCase struct {$/;"	s	package:compiler
+concatInstructions	compiler/helpers_test.go	/^func concatInstructions(s []code.Instructions) code.Instructions {$/;"	f	package:compiler	typeref:typename:code.Instructions
+constants	compiler/compiler.go	/^	constants    []object.Object$/;"	m	struct:compiler.Compiler	typeref:typename:[]object.Object
+constants	vm/vm.go	/^	constants    []object.Object$/;"	m	struct:vm.VM	typeref:typename:[]object.Object
 curPrecedence	parser/helpers.go	/^func (p *Parser) curPrecedence() int {$/;"	f	unknown:parser.Parser	typeref:typename:int
 curToken	parser/parser.go	/^	curToken  token.Token$/;"	m	struct:parser.Parser	typeref:typename:token.Token
 curTokenIs	parser/helpers.go	/^func (p *Parser) curTokenIs(t token.TokenType) bool {$/;"	f	unknown:parser.Parser	typeref:typename:bool
+definitions	code/def.go	/^var definitions = map[Opcode]*Definition{$/;"	v	package:code
+emit	compiler/compiler.go	/^func (c *Compiler) emit(op code.Opcode, operands ...int) int {$/;"	f	struct:compiler.Compiler	typeref:typename:int
 errors	parser/parser.go	/^	errors []string$/;"	m	struct:parser.Parser	typeref:typename:[]string
 eval	eval/array_test.go	/^package eval$/;"	p
 eval	eval/block_statement.go	/^package eval$/;"	p
@@ -345,6 +393,9 @@ evalProgram	eval/program.go	/^func evalProgram(program *ast.Program, env *object
 evalStatements	eval/statements.go	/^func evalStatements(stmts []ast.Statement, env *object.Environment) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
 evalStringInfixExpression	eval/infix.go	/^func evalStringInfixExpression($/;"	f	package:eval	typeref:typename:object.Object
 expectPeek	parser/helpers.go	/^func (p *Parser) expectPeek(t token.TokenType) bool {$/;"	f	unknown:parser.Parser	typeref:typename:bool
+expected	vm/helpers_test.go	/^	expected interface{}$/;"	m	struct:vm.vmTestCase	typeref:typename:interface{}
+expectedConstants	compiler/compiler_test.go	/^	expectedConstants    []interface{}$/;"	m	struct:compiler.compilerTestCase	typeref:typename:[]interface{}
+expectedInstructions	compiler/compiler_test.go	/^	expectedInstructions []code.Instructions$/;"	m	struct:compiler.compilerTestCase	typeref:typename:[]code.Instructions
 expressionNode	ast/array.go	/^func (al *ArrayLiteral) expressionNode()      {}$/;"	f	struct:ast.ArrayLiteral
 expressionNode	ast/bool.go	/^func (b *Boolean) expressionNode()      {}$/;"	f	struct:ast.Boolean
 expressionNode	ast/call.go	/^func (ce *CallExpression) expressionNode()      {}$/;"	f	struct:ast.CallExpression
@@ -359,9 +410,14 @@ expressionNode	ast/node.go	/^	expressionNode()$/;"	n	interface:ast.Expression
 expressionNode	ast/prefix.go	/^func (pe *PrefixExpression) expressionNode()      {}$/;"	f	struct:ast.PrefixExpression
 expressionNode	ast/str.go	/^func (sl *StringLiteral) expressionNode()      {}$/;"	f	struct:ast.StringLiteral
 extendFunctionEnv	eval/func.go	/^func extendFunctionEnv($/;"	f	package:eval	typeref:typename:*object.Environment
+fmtInstruction	code/instructions.go	/^func (ins Instructions) fmtInstruction(def *Definition, operands []int) string {$/;"	f	type:code.Instructions	typeref:typename:string
 infixParseFn	parser/parser.go	/^	infixParseFn  func(ast.Expression) ast.Expression$/;"	t	package:parser	typeref:typename:func(ast.Expression) ast.Expression
 infixParseFns	parser/parser.go	/^	infixParseFns  map[token.TokenType]infixParseFn$/;"	m	struct:parser.Parser	typeref:typename:map[token.TokenType]infixParseFn
+input	compiler/compiler_test.go	/^	input                string$/;"	m	struct:compiler.compilerTestCase	typeref:typename:string
 input	lexer/lexer.go	/^	input        string$/;"	m	struct:lexer.Lexer	typeref:typename:string
+input	vm/helpers_test.go	/^	input    string$/;"	m	struct:vm.vmTestCase	typeref:typename:string
+instructions	compiler/compiler.go	/^	instructions code.Instructions$/;"	m	struct:compiler.Compiler	typeref:typename:code.Instructions
+instructions	vm/vm.go	/^	instructions code.Instructions$/;"	m	struct:vm.VM	typeref:typename:code.Instructions
 isDigit	lexer/private.go	/^func isDigit(ch byte) bool {$/;"	f	package:lexer	typeref:typename:bool
 isError	eval/err.go	/^func isError(obj object.Object) bool {$/;"	f	package:eval	typeref:typename:bool
 isLetter	lexer/private.go	/^func isLetter(ch byte) bool {$/;"	f	package:lexer	typeref:typename:bool
@@ -396,6 +452,8 @@ object	object/object.go	/^package object$/;"	p
 object	object/return.go	/^package object$/;"	p
 object	object/str.go	/^package object$/;"	p
 outer	object/env.go	/^	outer *Environment$/;"	m	struct:object.Environment	typeref:typename:*Environment
+parse	compiler/helpers_test.go	/^func parse(input string) *ast.Program {$/;"	f	package:compiler	typeref:typename:*ast.Program
+parse	vm/helpers_test.go	/^func parse(input string) *ast.Program {$/;"	f	package:vm	typeref:typename:*ast.Program
 parseArrayLiteral	parser/array.go	/^func (p *Parser) parseArrayLiteral() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
 parseBlockStatement	parser/block.go	/^func (p *Parser) parseBlockStatement() *ast.BlockStatement {$/;"	f	unknown:parser.Parser	typeref:typename:*ast.BlockStatement
 parseBoolean	parser/bool.go	/^func (p *Parser) parseBoolean() ast.Expression {$/;"	f	unknown:parser.Parser	typeref:typename:ast.Expression
@@ -461,11 +519,13 @@ peekError	parser/errors.go	/^func (p *Parser) peekError(t token.TokenType) {$/;"
 peekPrecedence	parser/helpers.go	/^func (p *Parser) peekPrecedence() int {$/;"	f	unknown:parser.Parser	typeref:typename:int
 peekToken	parser/parser.go	/^	peekToken token.Token$/;"	m	struct:parser.Parser	typeref:typename:token.Token
 peekTokenIs	parser/helpers.go	/^func (p *Parser) peekTokenIs(t token.TokenType) bool {$/;"	f	unknown:parser.Parser	typeref:typename:bool
+pop	vm/vm.go	/^func (vm *VM) pop() object.Object {$/;"	f	struct:vm.VM	typeref:typename:object.Object
 position	lexer/lexer.go	/^	position     int  \/\/ current position in input (points to current char)$/;"	m	struct:lexer.Lexer	typeref:typename:int
 precedences	parser/vars.go	/^var precedences = map[token.TokenType]int{$/;"	v	package:parser
 prefixParseFn	parser/parser.go	/^	prefixParseFn func() ast.Expression$/;"	t	package:parser	typeref:typename:func() ast.Expression
 prefixParseFns	parser/parser.go	/^	prefixParseFns map[token.TokenType]prefixParseFn$/;"	m	struct:parser.Parser	typeref:typename:map[token.TokenType]prefixParseFn
 printParserErrors	repl/repl.go	/^func printParserErrors(out io.Writer, errors []string) {$/;"	f	package:repl
+push	vm/vm.go	/^func (vm *VM) push(o object.Object) error {$/;"	f	struct:vm.VM	typeref:typename:error
 readChar	lexer/private.go	/^func (l *Lexer) readChar() {$/;"	f	unknown:lexer.Lexer
 readIdentifier	lexer/private.go	/^func (l *Lexer) readIdentifier() string {$/;"	f	unknown:lexer.Lexer	typeref:typename:string
 readNumber	lexer/private.go	/^func (l *Lexer) readNumber() string {$/;"	f	unknown:lexer.Lexer	typeref:typename:string
@@ -475,7 +535,11 @@ registerInfix	parser/register_helpers.go	/^func (p *Parser) registerInfix(tokenT
 registerPrefix	parser/register_helpers.go	/^func (p *Parser) registerPrefix(tokenType token.TokenType, fn prefixParseFn) {$/;"	f	unknown:parser.Parser
 repl	repl/monkey.go	/^package repl$/;"	p
 repl	repl/repl.go	/^package repl$/;"	p
+runCompilerTests	compiler/helpers_test.go	/^func runCompilerTests(t *testing.T, tests []compilerTestCase) {$/;"	f	package:compiler
+runVmTests	vm/helpers_test.go	/^func runVmTests(t *testing.T, tests []vmTestCase) {$/;"	f	package:vm
 skipWhitespace	lexer/private.go	/^func (l *Lexer) skipWhitespace() {$/;"	f	unknown:lexer.Lexer
+sp	vm/vm.go	/^	sp    int \/\/ Always points to the next value. Top of stack is stack[sp-1]$/;"	m	struct:vm.VM	typeref:typename:int
+stack	vm/vm.go	/^	stack []object.Object$/;"	m	struct:vm.VM	typeref:typename:[]object.Object
 statementNode	ast/block.go	/^func (bs *BlockStatement) statementNode()       {}$/;"	f	struct:ast.BlockStatement
 statementNode	ast/expr.go	/^func (es *ExpressionStatement) statementNode()       {}$/;"	f	struct:ast.ExpressionStatement
 statementNode	ast/let.go	/^func (ls *LetStatement) statementNode()       {}$/;"	f	struct:ast.LetStatement
@@ -484,14 +548,23 @@ statementNode	ast/return.go	/^func (rs *ReturnStatement) statementNode()       {
 store	object/env.go	/^	store map[string]Object$/;"	m	struct:object.Environment	typeref:typename:map[string]Object
 testBooleanLiteral	parser/helpers_test.go	/^func testBooleanLiteral(t *testing.T, exp ast.Expression, value bool) bool {$/;"	f	package:parser	typeref:typename:bool
 testBooleanObject	eval/bool_test.go	/^func testBooleanObject(t *testing.T, obj object.Object, expected bool) bool {$/;"	f	package:eval	typeref:typename:bool
+testConstants	compiler/helpers_test.go	/^func testConstants($/;"	f	package:compiler	typeref:typename:error
 testEval	eval/helpers_test.go	/^func testEval(input string) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+testExpectedObject	vm/helpers_test.go	/^func testExpectedObject($/;"	f	package:vm
 testIdentifier	parser/helpers_test.go	/^func testIdentifier(t *testing.T, exp ast.Expression, value string) bool {$/;"	f	package:parser	typeref:typename:bool
 testInfixExpression	parser/helpers_test.go	/^func testInfixExpression(t *testing.T, exp ast.Expression, left interface{},$/;"	f	package:parser	typeref:typename:bool
+testInstructions	compiler/helpers_test.go	/^func testInstructions($/;"	f	package:compiler	typeref:typename:error
 testIntegerLiteral	parser/helpers_test.go	/^func testIntegerLiteral(t *testing.T, il ast.Expression, value int64) bool {$/;"	f	package:parser	typeref:typename:bool
+testIntegerObject	compiler/helpers_test.go	/^func testIntegerObject(expected int64, actual object.Object) error {$/;"	f	package:compiler	typeref:typename:error
 testIntegerObject	eval/int_test.go	/^func testIntegerObject(t *testing.T, obj object.Object, expected int64) bool {$/;"	f	package:eval	typeref:typename:bool
+testIntegerObject	vm/helpers_test.go	/^func testIntegerObject(expected int64, actual object.Object) error {$/;"	f	package:vm	typeref:typename:error
 testLetStatement	parser/helpers_test.go	/^func testLetStatement(t *testing.T, s ast.Statement, name string) bool {$/;"	f	package:parser	typeref:typename:bool
 testLiteralExpression	parser/helpers_test.go	/^func testLiteralExpression($/;"	f	package:parser	typeref:typename:bool
 testNullObject	eval/helpers_test.go	/^func testNullObject(t *testing.T, obj object.Object) bool {$/;"	f	package:eval	typeref:typename:bool
 token	token/consts.go	/^package token$/;"	p
 token	token/token.go	/^package token$/;"	p
 unwrapReturnValue	eval/func.go	/^func unwrapReturnValue(obj object.Object) object.Object {$/;"	f	package:eval	typeref:typename:object.Object
+vm	vm/helpers_test.go	/^package vm$/;"	p
+vm	vm/int_test.go	/^package vm$/;"	p
+vm	vm/vm.go	/^package vm$/;"	p
+vmTestCase	vm/helpers_test.go	/^type vmTestCase struct {$/;"	s	package:vm
