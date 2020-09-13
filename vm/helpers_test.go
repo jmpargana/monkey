@@ -54,7 +54,7 @@ func runVmTests(t *testing.T, tests []vmTestCase) {
 			t.Fatalf("vm error: %s", err)
 		}
 
-		stackElem := vm.StackTop()
+		stackElem := vm.LastPoppedStackElem()
 
 		testExpectedObject(t, tt.expected, stackElem)
 	}
@@ -68,6 +68,10 @@ func testExpectedObject(
 	t.Helper()
 
 	switch expected := expected.(type) {
+	case bool:
+		if err := testBooleanObject(bool(expected), actual); err != nil {
+			t.Errorf("testBooleanObject failed: %s", err)
+		}
 	case int:
 		err := testIntegerObject(int64(expected), actual)
 		if err != nil {
